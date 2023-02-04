@@ -1,0 +1,22 @@
+{
+  "name": "com.develsystems.smartidplugin",
+  "version": "0.0.1",
+  "description": "ionic smartid plugin",
+  "cordova": {
+    "id": "com.develsystems.smartidplugin",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios"
+  ],
+  "author": "Alejandro Ramirez",
+  "license": "ISC",
+  "dependencies": {
+    "cordova-plugin-add-swift-support": "^2.0.2"
+  }
+}

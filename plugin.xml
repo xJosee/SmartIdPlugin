@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android" id="com.develsystems.smartidplugin" version="0.0.1">
+   <name>SmartIdPlugin</name>
+   <js-module name="SmartIdPlugin" src="www/SmartIdPlugin.js">
+      <clobbers target="cordova.plugins.SmartIdPlugin" />
+   </js-module>
+   <platform name="android">
+      <config-file parent="/*" target="res/xml/config.xml">
+         <feature name="SmartIdPlugin">
+            <param name="android-package" value="com.develsystems.smartidplugin.SmartIdPlugin" />
+         </feature>
+      </config-file>
+      <config-file parent="/*" target="AndroidManifest.xml" />
+      <source-file src="src/android/SmartIdPlugin.java" target-dir="src/com/develsystems/smartidplugin/SmartIdPlugin" />
+      <framework src="com.develsystems.gyt:smartid:1.1.6" />
+      <framework src="com.fasterxml.jackson.core:jackson-core:2.10.3" />
+      <framework src="com.fasterxml.jackson.core:jackson-databind:2.10.3" />
+   </platform>
+   <platform name="ios">
+      <config-file parent="/*" target="config.xml">
+         <feature name="SmartIdPlugin">
+            <param name="ios-package" value="SmartIdPlugin" />
+         </feature>
+      </config-file>
+      <source-file src="src/ios/SmartIdPlugin.swift" />
+
+      <dependency id="cordova-plugin-add-swift-support" version="2.0.2"/>      
+   </platform>
+</plugin>
