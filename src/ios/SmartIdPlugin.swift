@@ -32,8 +32,8 @@ import SmartId
         self.commandDelegate!.send(pluginResult, callbackId: command.callbackId);
     }
 
-    @objc(unlinkSmartId:)
-    func unlinkSmartId(command: CDVInvokedUrlCommand) {
+    @objc(unLinkSmartId:)
+    func unLinkSmartId(command: CDVInvokedUrlCommand) {
         let channel : String = String(describing: command.arguments[0]);
         let session : String = String(describing: command.arguments[1]);
         SID.shared.unlink(channel: channel, session: session)
